@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<!-- skill:chrome -->
+<style>
+/* Credit line — bottom-right */
+.design-ui-credit {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  font: 11px/1 system-ui, sans-serif;
+  color: rgba(128,128,128,0.5);
+  pointer-events: none;
+  z-index: 2147483647;
+  transition: opacity 0.4s ease;
+  user-select: none;
+  letter-spacing: 0.02em;
+}
+
+/* Hide chrome on touch devices */
+@media (hover: none) {
+  .design-ui-credit { display: none; }
+}
+
+/* Print fixes */
+@media print {
+  * {
+    transition: none !important;
+    animation: none !important;
+    box-shadow: none !important;
+  }
+  body {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  .design-ui-credit { display: none !important; }
+}
+
+</style>
+<script>
+(function () {
+    // Design-ui pages are single compositions, so the whole body is editable.
+    function markEditable() {
+        document.body.classList.add('artifact-editable');
+    }
+
+    // Credit badge with idle-fade. Hover devices only.
+    
+
+    function init() {
+        markEditable();
+        initChromeUI();
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
+
+</script>
+<!-- /skill:chrome -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Crizen Ronne B. Sanchez, IT graduate and full-stack web developer." />
+  <title>Crizen Sanchez | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div>
+      <nav class="primary-nav" aria-label="Portfolio navigation">
+        <div class="nav-group">
+          <button class="nav-button active" type="button" data-view="profile">My info</button>
+          <button class="nav-button" type="button" data-view="experience">Experience</button>
+          <button class="nav-button" type="button" data-view="stack">Stack</button>
+        </div>
+        <div class="nav-group">
+          <button class="nav-button" type="button" data-view="contact">Contact</button>
+        </div>
+      </nav>
+      <div class="mobile-bar">
+        <span class="mono muted">Portfolio / 2026</span>
+        <div class="mobile-actions">
+          <button class="mobile-theme" id="mobile-theme-toggle" type="button" aria-pressed="false"><span id="mobile-theme-icon"></span><span id="mobile-theme-label">Light</span></button>
+          <button id="mobile-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">Menu +</button>
+        </div>
+      </div>
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile portfolio navigation">
+        <button class="nav-button active" type="button" data-view="profile">My info</button>
+        <button class="nav-button" type="button" data-view="experience">Experience</button>
+        <button class="nav-button" type="button" data-view="stack">Stack</button>
+        <button class="nav-button" type="button" data-view="contact">Contact</button>
+      </nav>
+    </div>
+    <div class="sidebar-bottom">
+      <div class="presence"><div class="presence-row"><span class="dot"></span><strong>Available for work</strong></div><span>Building useful software with less noise.</span></div>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false"><span class="theme-icon" id="theme-icon"></span><span id="theme-label">Light mode</span></button>
+      <a class="sidebar-email" href="mailto:sanchezcrizen@gmail.com">sanchezcrizen@gmail.com</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="content">
+      <section class="view active" id="profile">
+        <div class="home-header">
+          <div class="portrait" id="portrait" aria-label="Profile photo area">
+            <span class="portrait-placeholder"><span class="initials">CS</span><span>Add profile.jpg later</span></span>
+            <img class="portrait-image" id="photo" src="profile.jpg" alt="Crizen Sanchez profile" />
+          </div>
+          <div>
+            <div class="eyebrow">IT graduate / full-stack developer</div>
+            <h1 class="home-title">Crizen<br /><em>Sanchez</em></h1>
+            <p class="home-copy">Motivated IT graduate with experience in web development, technical support, digital content management, data entry, and hands-on product work.</p>
+            <div class="socials"><a href="https://www.linkedin.com/in/crizen-sanchez-63917b255" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a><a href="mailto:sanchezcrizen@gmail.com">Email</a></div>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat"><span class="stat-value">2025</span><span class="stat-label">BSIT graduate</span></div>
+          <div class="stat"><span class="stat-value">04</span><span class="stat-label">core strengths</span></div>
+          <div class="stat"><span class="stat-value">06</span><span class="stat-label">projects and roles</span></div>
+          <div class="stat"><span class="stat-value">PH</span><span class="stat-label">based in</span></div>
+        </div>
+        <div class="rule"></div>
+        <div class="kicker"><h2 class="section-title">01, personal info</h2><span class="section-note">profile</span></div>
+        <div class="info-line"><span>Education</span><strong>Bachelor of Science in Information Technology</strong></div>
+        <div class="info-line"><span>School</span><strong>Caraga State University, Main Campus</strong></div>
+        <div class="info-line"><span>Years</span><strong>2021 to 2025</strong></div>
+      </section>
+
+      <section class="view" id="experience">
+        <div class="eyebrow">from the resume</div><h1 class="page-title">Experience</h1>
+        <p class="intro">A mix of internships, support work, freelance testing, creative production, and product development.</p>
+        <div class="experience-list">
+          <article class="experience-item"><div class="badge">01</div><h2 class="company">Clinic System</h2><div class="role">Project-based / frontend</div><div class="date">Current project</div><p>Developed a real-time queue dashboard with dynamic status updates, priority sorting, and live wait-time displays. Built responsive patient registration, tabbed patient profiles, multi-tab consultation flows, and reusable DataTable actions for Start, Hold, Resume, and No Show.</p><div class="chips" style="margin-top:14px"><span class="chip">Next.js</span><span class="chip">React</span><span class="chip">Supabase</span><span class="chip">TypeScript</span></div></article>
+          <article class="experience-item"><div class="badge">02</div><h2 class="company">AI Image and Video Content Generator</h2><div class="role">Creative production</div><div class="date">January 2026 to March 2026</div><p>Generated hyper-realistic AI images and videos using Google Flow, Nano Banana Pro, and Veo 3. Produced short-form video content from written scripts and managed a repeatable workflow delivering 6 or more finished videos and images per day.</p><div class="chips" style="margin-top:14px"><span class="chip">Google Flow</span><span class="chip">Nano Banana Pro</span><span class="chip">Veo 3</span></div></article>
+          <article class="experience-item"><div class="badge">03</div><h2 class="company">App Tester</h2><div class="role">Freelance / project-based</div><div class="date">Project-based</div><p>Tested application features for functionality and performance, documented bugs and crashes, evaluated user interfaces, followed test cases, and provided clear feedback to support development.</p><div class="chips" style="margin-top:14px"><span class="chip">QA testing</span><span class="chip">Bug reporting</span><span class="chip">UX review</span></div></article>
+          <article class="experience-item"><div class="badge">04</div><h2 class="company">Online Chat Support / Account Handler</h2><div class="role">Client support</div><div class="date">July 2025 to September 2025</div><p>Managed client accounts, responded to messages in real time, handled high-volume conversations while meeting response targets, followed communication guidelines, and assisted with online profiles and user interactions.</p></article>
+          <article class="experience-item"><div class="badge">05</div><h2 class="company">Technology Transfer and Licensing Office</h2><div class="role">Internship</div><div class="date">January 2025 to June 2025</div><a class="location" href="https://www.carsu.edu.ph/" target="_blank" rel="noreferrer">Caraga State University - Main</a><p>Designed and launched a Google Site webpage, contributed to the CARAGA RAISE Program website and DOST PCAARRD RTMS content build-up, transferred IP files to the website, validated content with project leads, and supported the digital restructuring of the RAISE Program’s online presence.</p><div class="chips" style="margin-top:14px"><span class="chip">Web content</span><span class="chip">IP documentation</span><span class="chip">Google Sites</span></div></article>
+        </div>
+      </section>
+
+      <section class="view" id="stack">
+        <div class="eyebrow">the tools behind the work</div><h1 class="page-title">Tech stack</h1>
+        <p class="stack-intro">Grouped by what you actually use, not a random pile of technologies.</p>
+        <div class="stack-groups">
+          <section class="stack-group"><div class="stack-group-head"><h2 class="stack-group-title">Frontend development</h2><span class="stack-group-note">Interfaces and styling</span></div><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">React.js</span><span class="chip">Next.js</span><span class="chip">Tailwind CSS</span></div></section>
+          <section class="stack-group"><div class="stack-group-head"><h2 class="stack-group-title">Backend and data</h2><span class="stack-group-note">Application logic</span></div><div class="chips"><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">Supabase</span><span class="chip">PostgreSQL</span><span class="chip">TypeScript</span><span class="chip">REST APIs</span></div></section>
+          <section class="stack-group"><div class="stack-group-head"><h2 class="stack-group-title">Programming foundations</h2><span class="stack-group-note">Languages</span></div><div class="chips"><span class="chip">C</span><span class="chip">Java</span><span class="chip">PHP</span></div></section>
+          <section class="stack-group"><div class="stack-group-head"><h2 class="stack-group-title">Testing and quality</h2><span class="stack-group-note">Reliable releases</span></div><div class="chips"><span class="chip">App testing</span><span class="chip">Test cases</span><span class="chip">Bug reporting</span><span class="chip">UX review</span><span class="chip">Attention to detail</span></div></section>
+          <section class="stack-group"><div class="stack-group-head"><h2 class="stack-group-title">Content and support</h2><span class="stack-group-note">Operations</span></div><div class="chips"><span class="chip">Google Sites</span><span class="chip">Web content management</span><span class="chip">Data entry</span><span class="chip">File management</span><span class="chip">Email and chat support</span><span class="chip">Technical support</span></div></section>
+          <section class="stack-group"><div class="stack-group-head"><h2 class="stack-group-title">AI creative tools</h2><span class="stack-group-note">Image and video</span></div><div class="chips"><span class="chip">Google Flow</span><span class="chip">Nano Banana Pro</span><span class="chip">Veo 3.1</span></div></section>
+          <section class="stack-group"><div class="stack-group-head"><h2 class="stack-group-title">Professional strengths</h2><span class="stack-group-note">How you work</span></div><div class="chips"><span class="chip">Critical thinking</span><span class="chip">Team collaboration</span><span class="chip">Fast learner</span></div></section>
+        </div>
+      </section>
+
+      <section class="view" id="contact">
+        <div class="eyebrow">let’s talk</div><h1 class="page-title">Contact</h1>
+        <p class="intro">For web development, technical support, content work, app testing, or a good product problem.</p>
+        <div class="contact-box"><p>Kitcharao, 8609, Philippines</p><a class="email" href="mailto:sanchezcrizen@gmail.com">sanchezcrizen@gmail.com</a><a class="email" href="https://www.linkedin.com/in/crizen-sanchez-63917b255" target="_blank" rel="noreferrer">linkedin.com/in/crizen-sanchez-63917b255</a></div>
+      </section>
+    </div>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>
